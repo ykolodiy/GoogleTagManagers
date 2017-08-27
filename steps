@@ -1,0 +1,5 @@
+1 create variable (what u need to track: exiturl, formId etc ?)
+2 create trigger, select trigger type the same as variable, if form id than dorm submission type, IF all forms or some forms based on formid
+3 create Tag > universo analytics > track type Event if not all pages > Label - variable from step 1 > Add trigger from step 2 > Save > Publish
+
+changes automatically you can see in adobe analytics
