@@ -1,5 +1,5 @@
 steps https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-java
-
+dimention metric explorer https://developers.google.com/analytics/devguides/reporting/core/dimsmets
 your dashboar https://console.developers.google.com/iam-admin/iam/project?project=positive-apex-202618
 
 need to enable api project before https://console.developers.google.com/apis/api/analyticsreporting.googleapis.com/overview?project=positive-apex-202618&duration=PT1H
