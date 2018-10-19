@@ -1,0 +1,9 @@
+//to track all downloads steps:
+
+1 https://tagmanager.google.com/#/home
+2 Triggers > New > Choose trigger type > Click "Just Links" > This triggers fires on Click Url + matches regex    (\.pdf|\.doc)
+3 Tag > New > Tag type "Goole Analytics Unibersal Analytics" > Track type "Event" >
+  Category : Download
+  Action : {{Click URL}}    what was downloaded
+  Label: {{Page Path}}   where it happened
+4 Publish
