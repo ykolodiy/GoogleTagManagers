@@ -1,0 +1,6 @@
+1 1 https://tagmanager.google.com/#/home
+2 Trigger > New > Name it > Trigger Type "Click Just Links" > fire trigger when "Click Url" + Doesn contain > domain.com
+3 attach trigger to tag > GA tag > Track Type EVENT 
+ categoty > exit links
+ action > {{Click Url}}
+ label > {{Page Path}}
