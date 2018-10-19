@@ -8,3 +8,13 @@
   Label: {{Page Path}}   where it happened
 4 Publish
 5 go to GA > Behaviour > Events
+
+
+ps. instead of {{Click URL}} you can create your own var that shows relative path
+> Variable > Custom JavaScript >  
+
+
+function() {
+var str = {{Click URL}};
+return str.replace(/^(?:\/\/|[^\/]+)*\//, "");
+}
