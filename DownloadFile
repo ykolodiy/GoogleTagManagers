@@ -7,3 +7,4 @@
   Action : {{Click URL}}    what was downloaded
   Label: {{Page Path}}   where it happened
 4 Publish
+5 go to GA > Behaviour > Events
