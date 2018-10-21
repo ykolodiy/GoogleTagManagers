@@ -1,3 +1,25 @@
 https://support.google.com/analytics/answer/2709829?hl=en
-https://mixedanalytics.com/blog/ga-gtm-datalayer-custom-dimensions/
+https://mixedanalytics.com/blog/ga-gtm-datalayer-custom-dimensions/   !!!
 
+STEP 1: PUSH VALUES INTO THE DATA LAYER
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+'event' : 'eventName',
+'dim1' : 'value1',
+'dim2' : 'value2'
+});
+
+STEP 2: SET UP CUSTOM DIMENSIONS IN GOOGLE ANALYTICS ADMIN
+For the next step, enter GA and go to Admin > Property > Custom Definitions > Custom Dimensions > +New Custom Dimension and fill out the name and scope for your variable.  Click Create.
+
+STEP 3: SET UP GOOGLE TAG MANAGER VARIABLES
+Next, set up Data Layer Variables in Google Tag Manager (GTM). These Variables will collect the values pushed into the data layer in step 1.
+To set up these Variables, navigate in GTM to Variables > User-Defined Variables > New > Variable Configuration > Choose variable type = Data Layer Variable. Enter in the name of the data layer variable to read from, making sure the name you use here exactly matches the name used in the data layer.
+
+STEP 4: ADD DIMENSIONS TO THE GA TAGS IN GTM
+The final step is sending the dimension value to GA. To send these values, dimensions need to be attached to other hits like pageviews, events, or ecommerce.
+In GTM, find the tag you want to attach the dimensions to. Usually this will be the GA page view tag, but other hit types will work exactly the same way. Click the “Enable overriding settings in this tag ” checkbox > More Settings > Custom Dimensions. (Or, alternately, you can set up these custom dimensions in the Google Analytics Settings Variable).
+In the Index slot, use the same index number as assigned in GA Admin in step 2. Under Dimension Value, add add the new Variable you created in step 3.
+
+CONCLUSION
+Following these 4 steps will enable you to populate custom dimensions in Google Analytics via the data layer and Google Tag Manager. Once these dimensions are collecting data, you can view these dimensions as a Secondary Dimension in any regular report, or create a custom report using your new dimension as a primary dimension.
