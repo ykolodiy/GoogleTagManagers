@@ -1,0 +1,21 @@
+If I were implementing this I would create a custom HTML tag containing a function that binds to the onchange event fo your select element. The function would fire a custom event into the dataLayer which also contains pertinent information. You would then create a UA event tracking tag that uses the correct information and is fired by a custom trigger that is fired by the custom event name.
+
+So, as follows:
+
+Create Custom HTML tag with some similar functionality to this, fire it on DOM ready of all pages you want to bind to a select element:
+
+<script>
+  $('#myselect').on('change', function(){
+    dataLayer.push({
+      'event':'select_change',
+      'select_val':this.value
+    });
+  });
+</script>
+Create a trigger of type custom event where event value = select_change
+
+Create a Universal Analytics tag which is an event tag and fill in the the required details (category, action, label, value). If this was me I'd use something like
+category = user interaction
+action = select change
+label = {{select_val}}
+This tag shoudl be fired by the trigger you created in 2.
