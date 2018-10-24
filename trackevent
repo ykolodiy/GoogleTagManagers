@@ -1,3 +1,7 @@
+https://developers.google.com/analytics/devguides/collection/analyticsjs/
+
+
+
 If I were implementing this I would create a custom HTML tag containing a function that binds to the onchange event fo your select element. The function would fire a custom event into the dataLayer which also contains pertinent information. You would then create a UA event tracking tag that uses the correct information and is fired by a custom trigger that is fired by the custom event name.
 
 So, as follows:
